@@ -9,6 +9,12 @@
 
   <url>https://github.com/ikedam/script-security-plugin-testjar</url>
   
+  <scm>
+    <connection>scm:git:git://github.com/ikedam/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:ikedam/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/ikedam/${project.artifactId}</url>
+  </scm>
+  
   <developers>
     <developer>
       <id>ikedam</id>
@@ -74,4 +80,17 @@
             <version>1.4</version>
         </dependency>
     </dependencies>
+    
+    <distributionManagement>
+        <repository>
+            <id>internal.repo.release</id>
+            <name>Internal Repository for Release</name>
+            <url>${internal.repo.path}/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>internal.repo.snapshot</id>
+            <name>Internal Repository for snapshot</name>
+            <url>${internal.repo.path}/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
